@@ -15,7 +15,7 @@
 
 - **[Conclusion](#Conclusion)**
 
-- **[References](#References)**
+- **[Research Materials](#Research-Materials)**
 
 ____________
 
@@ -623,24 +623,60 @@ Some issues sneak just under the radar and are really hard to find using traditi
 
 ______________
 
-## 📖 References
+## 📖 Research Materials
 
 ### General
 - [JavaScript Testing Best Practices](https://github.com/goldbergyoni/javascript-testing-best-practices)
 - [TDD principles](https://www.sm-cloud.com/book-review-test-driven-development-by-example-a-tldr/)
 
+### Unit Testing
+- [mocha](https://mochajs.org/)
+- [ava](https://github.com/avajs/ava)
+- [jest](https://jestjs.io/)
+- [chai](https://www.chaijs.com/)
+- [sinon](https://sinonjs.org/)
+
 ### Integration Testing
 - [Testing MongoDB using In-memory](https://dev.to/paulasantamaria/testing-node-js-mongoose-with-an-in-memory-database-32np)
+
+### Component Testing
 
 ### Contract Testing
 - [Pact as Consumer-Driven Contract Testing](https://docs.pact.io/)
 
-### Property-based Testing
+### Mutation Testing
+- [Stryker](https://stryker-mutator.io/)
+- [mutode](https://github.com/TheSoftwareDesignLab/mutode)
+
+### Load Testing
+- [Artillery](https://artillery.io/)
+- [k6](https://k6.io/)
+
+### Property-based and Fuzz Testing
+- [Property-based vs Fuzz Testing](https://www.tedinski.com/2018/12/11/fuzzing-and-property-testing.html)
 - [fast-check](https://github.com/dubzzz/fast-check)
+
+### Smoke Testing
+- [Postman](https://www.postman.com/use-cases/api-testing-automation/)
+
+### Acceptance Testing
+- [selenium-webdriver](https://www.npmjs.com/package/selenium-webdriver)
+
+### Exploratory Testing
+- [Postman](https://www.postman.com/use-cases/exploratory-testing/)
+- [newman](https://learning.postman.com/docs/running-collections/using-newman-cli/command-line-integration-with-newman/)
 
 ### Performance Testing
 - [Understanding Memory Leaks](https://blog.logrocket.com/understanding-memory-leaks-node-js-apps/)
 - [Avoiding Memory Leaks in NodeJS](https://blog.appsignal.com/2020/05/06/avoiding-memory-leaks-in-nodejs-best-practices-for-performance.html)
+- [k6](https://k6.io/)
+
+### Chaos Engineering
+- [chaosmonkey](https://github.com/Netflix/chaosmonkey)
+- [kube-monkey](https://github.com/asobti/kube-monkey)
+
+### Code Coverage
+- [nyc](https://github.com/istanbuljs/nyc)
 
 ### Monitoring
 - [Logging](https://abdullin.com/telemetry/)
