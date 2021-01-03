@@ -28,6 +28,11 @@
   The citations I made when writing this.
 ____________
 
+## ☯️ The Way of Testing
+> 🌟 "Test only as much as needed, strive to keep it nimble, sometimes it's even worth dropping some tests and trade reliability for agility and simplicity"
+>
+> _-- Yoni Goldberg_
+
 ## 🏛️ Section 1: Test Structures
 
 ### Section 1.1: 3 Core Parts
