@@ -156,9 +156,9 @@ describe('isEligibleToVote', function() {
 ```
 1. The unit under test is `isEligibleToVote`
 2. Here, we setup the table testing
-    > 💡 **TAKE NOTE** that **WE NEED** to name the test. So that later on, we could treat this as a clear-cut documentation for this function
+    > **💡 TAKE NOTE** that **WE NEED** to name the test. So that later on, we could treat this as a clear-cut documentation for this function
 
-> 💡 **TAKE NOTE** Table-driven testing is still unconventional in NodeJS environment YET. It also breaks the default convention of `eslint-plugin-mocha`. Fortunately, you can customize your `rules`.
+> **⚠️ WARNING** Table-driven testing is still unconventional in NodeJS environment YET. It also breaks the default convention of `eslint-plugin-mocha`. Fortunately, you can customize your `rules`.
 
 ### Further guidelines when structuring your tests
 
@@ -571,8 +571,8 @@ For example, did you ever test what happens when your process memory is overload
 
 Chaos Engineering, it aims to provide awareness, frameworks and tools for testing our app resiliency for chaotic issues.
 
-Chaos monkey
-kube-monkey
+- `chaos monkey`
+- `kube-monkey`
 
 ### 📏 Section 3: Measuring Test
 1. Get enough coverage for being confident ~80% seem to be the lucky number
@@ -629,6 +629,7 @@ ______________
 ### General
 - [JavaScript Testing Best Practices](https://github.com/goldbergyoni/javascript-testing-best-practices)
 - [TDD principles](https://www.sm-cloud.com/book-review-test-driven-development-by-example-a-tldr/)
+- [Test Driven Development By Example TLDR;](https://www.sm-cloud.com/book-review-test-driven-development-by-example-a-tldr/)
 
 ### Unit Testing
 - [mocha](https://mochajs.org/)
