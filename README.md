@@ -17,6 +17,7 @@
 
 - **[Resources](#Resources)**
 
+- **[References](#References)**
 ____________
 
 ## 🏛️ Section 1: Test Structures
@@ -681,3 +682,5 @@ ______________
 ### Monitoring
 - [Logging](https://abdullin.com/telemetry/)
 - [Uptime Monitor and Status Page](https://github.com/upptime/upptime)
+
+## References
