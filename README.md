@@ -698,3 +698,4 @@ ______________
 - [Uptime Monitor and Status Page](https://github.com/upptime/upptime)
 
 ## References
+1. [Javascript Testing Best Practices, The Golden Rule: Design For Testing by Yoni Goldberg, Bruno Scheufler, Ido Richter and Kyle Martin](https://github.com/goldbergyoni/javascript-testing-best-practices#%EF%B8%8F-0-the-golden-rule-design-for-lean-testing)
