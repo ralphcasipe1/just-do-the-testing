@@ -542,7 +542,7 @@ only like any other model, despite its usefulness, it must be wrong sometimes. F
 
 > **⚠️ WARNING**, The TDD argument in the software world takes a typical false-dichotomy face, some preach to use it everywhere, other think it's the devil. Everyone who speaks in absolutes is wrong.
 
-![logo](./assets/outside-pyramid-tests.jpeg)
+![logo](./assets/outside-pyramid-tests.png)
 
 ### Metrics can include:
 - Gathering logs from different machines
