@@ -9,15 +9,23 @@
 
 - **[Measuring test](#Measuring-test)**
 
+  Measuring the quality of the implemented Tests
+
 - **[CI](#CI)**
 
   Leveraging continuous testing for failing fast and continuous improvement
 
 - **[Conclusion](#Conclusion)**
 
+  My closing thoughts about the current state of testing techniques in todays era.
+
 - **[Resources](#Resources)**
 
+  My research materials that help me a lot when writing this.
+
 - **[References](#References)**
+
+  The citations I made when writing this.
 ____________
 
 ## 🏛️ Section 1: Test Structures
