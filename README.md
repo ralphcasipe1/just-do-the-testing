@@ -15,7 +15,7 @@
 
 - **[Conclusion](#Conclusion)**
 
-- **[Research Materials](#Research-Materials)**
+- **[Resources](#Resources)**
 
 ____________
 
@@ -623,7 +623,7 @@ Some issues sneak just under the radar and are really hard to find using traditi
 
 ______________
 
-## 📖 Research Materials
+## 📖 Resources
 
 ### General
 - [JavaScript Testing Best Practices](https://github.com/goldbergyoni/javascript-testing-best-practices)
