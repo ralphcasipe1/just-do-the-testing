@@ -7,6 +7,10 @@
 
   In this secion, we would share testing techniques outside the famous test pyramid (unit, integration and e2e). How micro-service architecture affects testing and what are the efficient way to test it.
 
+- **[Chaos Testing](#Chaos-Testing)**
+
+  This section will talk about Chaos Engineering.
+
 - **[Measuring test](#Measuring-test)**
 
   Measuring the quality of the implemented Tests
@@ -586,6 +590,26 @@ Chaos Engineering, it aims to provide awareness, frameworks and tools for testin
 
 - `chaos monkey`
 - `kube-monkey`
+
+### 💥 Chaos Engineering
+> Chaos Engineering is the discipline of experimenting on a system in order to build confidence in the system's capability to withstand turbulent conditions in production.
+
+1. Start by defining 'steady state' as some measurable output of a system that indicates normal behavior.
+
+2. Hypothesize that this steady state will continue in both the control group and the experimental group.
+
+3. Try to disprove the hypothesis by looking for a difference in steady state between the control group and the experimental group.
+
+### ADVANCED PRINCIPLES
+Build a hypothesis around steady state behavior
+
+Vary Real-world Events
+
+Run experiments in Production
+
+Automate Expiriments to run continuously
+
+Minimize Blast Radius
 
 ### 📏 Section 3: Measuring Test
 1. Get enough coverage for being confident ~80% seem to be the lucky number
