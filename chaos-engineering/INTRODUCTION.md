@@ -40,7 +40,7 @@ It is a new approach to software development and testing designed to eliminate s
 
 The idea is to put MOST parts of your system in a deterministic manner by performing controlled experiments in a distributed environment. This will help your team build confidence in the system's ability to tolerate the inevitable failures.
 
-In other words, break your system on purpose to find out where the weakness are. That way, you can fix them before they break unexpectedly and hurt the business and your users.
+In other words, break your system on purpose to find out where the weaknesses are. That way, you can fix them before they break unexpectedly and hurt the business and your users.
 
 As a result, you will better understand how your systems really behave when they fail. You can exercise contingency plans at scale to ensure those plans works as designed. Chaos Engineering Services also provides the ability to revert systems back to their original states without impacting users. It can also saves a lot of time and money that would be spent responding to systems outages.
 
