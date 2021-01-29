@@ -98,12 +98,10 @@ In software development, a given software system's ability to tolerate failures 
 
 However, development teams often fail to meet this requirement due to factors such as **short deadlines** or **lack of knowledge** of the field. It is a techinique to meet the resilience requirement.
 
-Chaos engineering can be used to achieve resilience against these types of failures:
+Chaos engineering can be used to achieve resilience against these types of failures [ [3](https://en.wikipedia.org/wiki/Chaos_engineering) ]:
 1. Infrastructure
 2. Network
 3. Application
-
-[ [3](https://en.wikipedia.org/wiki/Chaos_engineering) ]
 
 ### References
 1. [Microsoft's Chaos Engineering](https://docs.microsoft.com/en-us/azure/architecture/framework/resiliency/chaos-engineering)
