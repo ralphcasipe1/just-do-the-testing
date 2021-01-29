@@ -1,4 +1,4 @@
-# INTRODUCTION TO CHAOS ENGINEERING
+# 💥 INTRODUCTION TO CHAOS ENGINEERING
 
 > **CHAOS ENGINEERING** is the discipline of experimenting on a distributed system in order to induce artificial failures to build confidence in the system's capability to withstand turbulent conditions in production. [ [5](https://www.infostretch.com/resources/white-papers/chaos-engineering/) ]
 
@@ -11,14 +11,14 @@ One strategy that is gaining popularity is chaos engineering.
 
 Using this proactive testing practice, an organization can look for and fix failures before they cause a costly outage.
 
-## What is Chaos Engineering?
+## ❓ What is Chaos Engineering?
 It is engineering is a strategy for discovering vulnerabilities in a distributed system.
 
 This practice requires injecting failures and errors into software during production.
 
 Once you intentionally cause a bug, monitor the effects to see how the system responds to stress.
 
-By "breaking things" on purpose, you discover new issues that could impact components and end-users. Address the identified weaknesses before they cause data loss or service impact [ [2](References) ].
+By "breaking things" on purpose, you discover new issues that could impact components and end-users. Address the identified weaknesses before they cause data loss or service impact [ [2](https://phoenixnap.com/blog/chaos-engineering) ].
 
 ### Chaos engineering allows an admin to:
 1. Identify weak points in a system.
@@ -30,7 +30,7 @@ By "breaking things" on purpose, you discover new issues that could impact compo
 >
 > A common way to introduce chaos is to deliberately inject faults that cause system components to fail. 
 >
-> _The goal is to obeserve, monitor, respond to and improve your system's reliability under adverse circumstances_. [ [1](References) ]
+> _The goal is to obeserve, monitor, respond to and improve your system's reliability under adverse circumstances_. [ [1](https://docs.microsoft.com/en-us/azure/architecture/framework/resiliency/chaos-engineering) ]
 
 It is a new approach to software development and testing designed to eliminate some of that unpredictability by putting that complexity and interdependence to the test.
 
@@ -38,15 +38,18 @@ The idea is to perform controlled experiments in a distributed environment that 
 
 As a result, you will better understand how your IT systems really behave when they fail. You can exercise contingency plans at scale to ensure those palns works as designed. Chaos Engineering Services also provides the ability to revert systems back to their original states without impacting users. It can also saves a lot of time and money that would be spent responding to systems outages.
 
-Build Testing vs Chaos Engineering
-Build Testing
+### Build Testing vs Chaos Engineering
+
+**Build Testing**
 A specific approach to testing known conditions.
 
 Assertion: Given specific conditions, a system will emit a specific output.
+
 Tests are typically; determine whether a property is true or false.
 
-Chaos Engineering
-A practice for generating new information
+**Chaos Engineering**
+A practice for generating new information.
+
 More exploratory in nature with unknown outcomes.
 
 Tests effects of various conditions; generates more subjective information.
