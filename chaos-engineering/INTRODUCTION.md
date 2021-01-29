@@ -1,5 +1,7 @@
 # 💥 INTRODUCTION TO CHAOS ENGINEERING
 
+> **TLDR;**
+>
 > **CHAOS ENGINEERING** is the discipline of experimenting on a distributed system in order to induce artificial failures to build confidence in the system's capability to withstand turbulent conditions in production. [ [5](https://www.infostretch.com/resources/white-papers/chaos-engineering/) ]
 
 ## Abstract
