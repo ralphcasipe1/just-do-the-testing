@@ -28,7 +28,7 @@ By "breaking things" on purpose, you discover new issues that could impact compo
 3. **Prepare** the team for real failures.
     Derive disciplined culture.
 4. **Pinpoint** bugs that are yet to cause system-wide issues.
-    Bugs that are not business related but bugs that are commonly known in distributed systems that are hard to replicate.
+    Bugs that are not business related but bugs are commonly known in distributed systems that are hard to replicate.
 
 > **Chaos engineering** is a methodology that _helps developers attain consistent reliability by hardening services against failures in production_. 
 >
@@ -38,7 +38,7 @@ By "breaking things" on purpose, you discover new issues that could impact compo
 
 It is a new approach to software development and testing designed to eliminate some of that unpredictability by putting that complexity and interdependence to the test.
 
-The idea is to put MOST parts of your system in a deterministic manner by performing controller experiments in a distributed environment. This will help your team build confidence in the system's ability to tolerate the inevitable failures.
+The idea is to put MOST parts of your system in a deterministic manner by performing controlled experiments in a distributed environment. This will help your team build confidence in the system's ability to tolerate the inevitable failures.
 
 In other words, break your system on purpose to find out where the weakness are. That way, you can fix them before they break unexpectedly and hurt the business and your users.
 
