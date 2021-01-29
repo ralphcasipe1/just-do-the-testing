@@ -9,7 +9,7 @@ Finding faults in a distributed system goes beyond the capability of standard py
 
 Companies need smarter ways to test microservices continuously. One strategy that is gaining popularity is **CHAOS ENGINEERING**.
 
-Using this proactive testing practice, an organization can prepare, shift the culture and fix failures before they cause costly outage.
+Using this proactive testing practice, an organization **can prepare**, **shift the culture** and **fix failures** before they cause costly outage.
 
 ## ❓ What is Chaos Engineering?
 It is a strategy for discovering vulnerabilities in a distributed system.
