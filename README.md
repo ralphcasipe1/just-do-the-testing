@@ -173,9 +173,13 @@ describe('isEligibleToVote', function() {
 ```
 1. The unit under test is `isEligibleToVote`
 2. Here, we setup the table testing
-    > **💡 TAKE NOTE** that **WE NEED** to name the test. So that later on, we could treat this as a clear-cut documentation for this function
+    > **💡 TAKE NOTE**
+    > 
+    >  That **WE NEED** to name the test. So that later on, we could treat this as a clear-cut documentation for this function
 
-> **⚠️ WARNING** Table-driven testing is still unconventional in NodeJS environment YET. It also breaks the default convention of `eslint-plugin-mocha`. Fortunately, you can customize your `rules`.
+> **⚠️ WARNING** 
+>
+> Table-driven testing is still unconventional in NodeJS environment YET. It also breaks the default convention of `eslint-plugin-mocha`. Fortunately, you can customize your `rules`.
 
 ### Further guidelines when structuring your tests
 
