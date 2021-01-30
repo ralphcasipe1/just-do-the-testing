@@ -1,5 +1,5 @@
 ## 📜 Table of Contents
-- **[Test Structures](#Section-1:-Test-Structures)**
+- **[Test Structures](#Section-1: Test-Structures)**
 
   Optimal way on structuring test which is aiming for readability and maintainability.
 
@@ -33,7 +33,9 @@
 ____________
 
 ## ☯️ The Way of Testing
-> 🌟 "Test only as much as needed, strive to keep it nimble, sometimes it's even worth dropping some tests and trade reliability for agility and simplicity"
+> 🌟 
+>
+> **"Test only as much as needed, strive to keep it nimble, sometimes it's even worth dropping some tests and trade reliability for agility and simplicity"**
 >
 > _-- Yoni Goldberg_
 
