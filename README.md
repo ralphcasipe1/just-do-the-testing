@@ -198,20 +198,20 @@ You could based the scenarios from the documentation requirements
 
 > **A** - rrange
 >
-> **Setup** your test, this could be under the `GIVEN` keyword
+> _SETUP_ the test first, this could be under the `GIVEN` keyword.
 > 
 > **A** - ct
 >
-> **Execute** the unit under test, it can also use the variables that was being set up in `GIVEN` section
+> _EXECUTE_ the unit under test, it can also use the variables that was being set up in `GIVEN` section
 > 
 > **A** - Assert
 > 
-> **Assert** the result and make sure it satisfies the expectation
+> _VERIFY_  the result and make sure it satisfies the expectation
 
 This will allow the reader or reviewer assess your code more easily.
 
 **😞 BAD EXAMPLE**
-```javascript
+```js
 describe('Customer classifier', function() {
   it('should be classified as premium', function() {
     const customerToClassify = { 
@@ -232,16 +232,16 @@ describe('Customer classifier', function() {
 });
 ```
 
-Although, the example is pretty straight forward in the developer's point of view. It is horrible for the non-technical people. **IT DOES NOT** state any kind of steps why the expected result should be classified as premium.
+Although, the example is pretty straight forward on developer's point of view. It is quite horrible for non-technical people. **IT DOES NOT** state any kind of steps to replicate the expected result.
 
 **🥳 THIS IS MUCH BETTER**
-```javascript
+```js
 describe('Customer classifier', function() {
   describe('GIVEN the classification is regular', function() {
     before(function() {
       this.customerToClassify = { spend: 505, joined: new Date(), id: 1 };
 
-      this.DBStub = sinon.stub(dataAccess, 'getCustomer').reply({
+      sinon.stub(dataAccess, 'getCustomer').reply({
         id: 1,
         classification: 'regular',
       });
@@ -260,13 +260,15 @@ describe('Customer classifier', function() {
 });
 ```
 
-The test runner would output this eligibly and readable for technical and non-technical people.
+The test runner would output this eligibly thus increasing the readability for BOTH technical and non-technical people.
 
 ### Section 1.3: Describe expectations in a product language: use BDD-style assertions
 
-Coding your tests in a declarative-style allow the reader to get the grab instantly without spending even a single brain-CPU cycle.
+Coding your tests in a declarative-style allow the reader to get the gist instantly without spending more time to digest the information.
 
-Base on the examples above we are structuring our tests via BDD-style.
+> **💡 TAKE NOTE**
+>
+> Base on the examples above we are structuring our tests via BDD-style.
 
 **😞 BAD**
 ```javascript
@@ -296,7 +298,7 @@ test("When asking for an admin, ensure only ordered admins in results", () => {
 ```
 
 **🥳 GOOD**
-```javascript
+```js
 describe('User', function() {
   describe('GIVEN the list of accounts', function() {
     before(function() {
@@ -325,24 +327,39 @@ Testing the internals brings huge overhead for almost nothing. If you code/API d
 Whenever a public behavior is checked, the private implementation is also implicitly tested and your tests will break only if there is a certain problem (e.g. wrong output).
 
 **😞 BAD**
-```javascript
+```js
 class ProductService {
-  //this method is only used internally
-  //Change this name will make the tests fail
+  /**
+   * This method is only used internally, to abstract some logic.
+   * 
+   * 1. Change this name will make the test FAIL!
+   * 
+   * 2. Change the result format or key name above will make the test FAIL!
+   */
   calculateVATAdd(priceWithoutVAT) {
     return { finalPrice: priceWithoutVAT * 1.2 };
-    //Change the result format or key name above will make the tests fail
   }
-  //public method
-  getPrice(productId) {
+
+  /**
+   * We will test this method since this is a public method.
+   */
+  public getPrice(productId) {
     const desiredProduct = DB.getProduct(productId);
+
     finalPrice = this.calculateVATAdd(desiredProduct.price).finalPrice;
+
     return finalPrice;
   }
 }
 
 it("White-box test: When the internal methods get 0 vat, it return 0 response", async () => {
-  //There's no requirement to allow users to calculate the VAT, only show the final price. Nevertheless we falsely insist here to test the class internals
+  /**
+   * There's no requirement to allow users to calculate the VAT,
+   * 
+   * only shows the final price.
+   * 
+   * Nevertheless we falsely insist here to test the class internals
+   */
   expect(new ProductService().calculateVATAdd(0).finalPrice).to.equal(0);
 });
 ```
@@ -353,22 +370,30 @@ it("White-box test: When the internal methods get 0 vat, it return 0 response", 
 Before using test doubles, ask a very simple question: Do I use it to test functional that appears, or could appear, in the requirement document? If no, it's a white-box testing smell.
 
 **😞 BAD**
-```javascript
+```js
 it("When a valid product is about to be deleted, ensure data access DAL was called once, with the right product and right config", async () => {
-  //Assume we already added a product
+  /**
+   * Assume, we already added the product
+   */
   const dataAccessMock = sinon.mock(DAL);
-  //hmmm BAD: testing the internals is actually our main goal here, not just a side-effect
+  /**
+   * BAD!
+   * 
+   * Testing the internals is acutally our main goal here, not just a side-effect.
+   */
   dataAccessMock
     .expects("deleteProduct")
     .once()
     .withArgs(DBConfig, theProductWeJustAdded, true, false);
+
   new ProductService().deletePrice(theProductWeJustAdded);
+
   dataAccessMock.verify();
 });
 ```
 
 **🥳 GOOD**
-```javascript
+```js
 describe('WHEN a valid product is about to be deleted', function() {
   before(function () {
     sinon.spy(Emailer.prototype, 'sendEmail');
@@ -382,7 +407,9 @@ describe('WHEN a valid product is about to be deleted', function() {
 });
 ```
 
-> 💡 **TAKE NOTE** Spies are focused in testing the requirements but as a side-effect are unavoidably touching to the internals.
+> 💡 **TAKE NOTE** 
+> 
+> Spies are focused in testing the requirements but as a side-effect are unavoidably touching to the internals.
 
 
 ### Section 1.6: Don't "foo", use realistic input data
@@ -424,6 +451,7 @@ it("Better: When adding new valid product, get successful confirmation", async (
 
 Typically we chooose a few input sample for each test. Even when the input format resembles real-world data.
 However, in productio, an API that is called with 5 parameters can be invoked with thousands of different permutations, one of them might render our process down 
+
 [Fuzz Testing](https://en.wikipedia.org/wiki/Fuzzing)
 
 [fast-check](https://github.com/dubzzz/fast-check)
@@ -456,14 +484,22 @@ before(async () => {
 it("When updating site name, get successful confirmation", async () => {
   //I know that site name "portal" exists - I saw it in the seed files
   const siteToUpdate = await SiteService.getSiteByName("Portal");
+
   const updateNameResult = await SiteService.changeName(siteToUpdate, "newName");
+
   expect(updateNameResult).to.be(true);
 });
 
 it("When querying by site name, get the right site", async () => {
   //I know that site name "portal" exists - I saw it in the seed files
   const siteToCheck = await SiteService.getSiteByName("Portal");
-  expect(siteToCheck.name).to.be.equal("Portal"); //Failure! The previous test change the name :[
+
+  /**
+   * Failure!
+   * 
+   * The previous test change the name
+   */
+  expect(siteToCheck.name).to.be.equal("Portal");
 });
 ```
 
@@ -649,18 +685,19 @@ Minimize Blast Radius
 As a web system have grown much more complex with the rise of distributed systems and microservices, system failures have become difficult to predict. So, in order to prevent failures from happening, we all need to be proactive in our efforts to from the failure.
 
 ### Techniques
-Resource
+
+**Resource**
 - Throttle CPU
 - Memory
 - I/O
 - Disk
 
-State Gremlins
+**State Gremlins**
 - Reboot hosts
 - Kill processes
 - Travel in time
 
-Network
+**Network**
 - Introduce Latency
 - Blackhole Traffic
 - Lose Packets
@@ -683,6 +720,7 @@ Once you have an idea of how your service interacts with other components of you
 - Observe the results
 
 - Scale our squash
+
 ### 📏 Section 3: Measuring Test
 1. Get enough coverage for being confident ~80% seem to be the lucky number
 The purpose of testing is to get enough confidence for moving fast, obviously the more code is tested the more confident the team can be. Coverage is a measure of how many code lines (and branches, statements, etc) are bing reached by the tests. 
