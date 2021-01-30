@@ -1,0 +1,4 @@
+# ADVANTAGES AND DISADVANTAGES
+A company's repuation and bottom-line decrease when their services go down. This cost can be calculated as a dollar-per-hour metric and has become common in many company's KPIs. A sophisticated team uses chaos engineering to decrease the amount of downtime costs.
+
+When a user steams using Netflix, and their service fails, they may switch to a YouTube video and Netflix loses money bevcause they were unable to retain that user's attention. Facebook loses ad revenue when its ads stop working, and Blizzard Entertainment loses video game players if it is known to have regular server outages.

@@ -62,14 +62,14 @@ Tests effects of various conditions; generates more subjective information.
 
 ## The Cost of System Downtime
 Eight fallacies of modern-day distributed computing
-1. The network is reliable
-2. Bandwidth is infinite
-3. Topology doesn't change
-4. Transport cost is zero
-5. Latency is zero
-6. The network is secure
-7. There is one administrator
-8. The network is homogenous
+1. THE NETWORK IS RELIABLE
+2. BANDWIDTH IS INFINITE
+3. TOPOLOGY DOESN'T CHANGE
+4. TRANSPORT COST IS ZERO
+5. LATENCY IS ZERO
+6. THE NETWORK IS SECURE
+7. THERE IS ONE ADMINISTRATOR
+8. THE NETWORK IS HOMOGENOUS
 
 ## Motivation for Chaos Engineering
 It's difficult to simulate the characteristics of a service's behavior at scale outside a production environment. 

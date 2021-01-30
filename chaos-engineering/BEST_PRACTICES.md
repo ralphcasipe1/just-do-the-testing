@@ -45,8 +45,7 @@ Observe component/service under test behavior in the absence of a dependent serv
 Lower-Level Environments
 Introduce chaos at container level: killing, stopping and removing running containers.
 
-
-
+__________
 Shift Left
 
 Shift Right
