@@ -1,5 +1,5 @@
 ## 📜 Table of Contents
-- **[Test Structures](#Section-1: Test-Structures)**
+- **[Test Structures](#Section-1:-Test-Structures)**
 
   Optimal way on structuring test which is aiming for readability and maintainability.
 
