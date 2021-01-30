@@ -14,8 +14,8 @@ Engineers analyze the system and choose what failure to cause. The core step of 
 
 Engineers also need to determine critical metric thresholds before starting a test. Metrics typically come in two sets:
 
-- Key metrics
-- Customer metrics
+- **Key metrics**
+- **Customer metrics**
 
 ### STEP 2: FAULT INJECTION
 
