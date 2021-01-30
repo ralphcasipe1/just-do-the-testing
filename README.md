@@ -7,6 +7,10 @@
 
   In this secion, we would share testing techniques outside the famous test pyramid (unit, integration and e2e). How micro-service architecture affects testing and what are the efficient way to test it.
 
+- **[Chaos Testing](#Chaos-Testing)**
+
+  This section will talk about Chaos Engineering.
+
 - **[Measuring test](#Measuring-test)**
 
   Measuring the quality of the implemented Tests
@@ -29,7 +33,9 @@
 ____________
 
 ## ☯️ The Way of Testing
-> 🌟 "Test only as much as needed, strive to keep it nimble, sometimes it's even worth dropping some tests and trade reliability for agility and simplicity"
+> 🌟 
+>
+> **"Test only as much as needed, strive to keep it nimble, sometimes it's even worth dropping some tests and trade reliability for agility and simplicity"**
 >
 > _-- Yoni Goldberg_
 
@@ -169,9 +175,13 @@ describe('isEligibleToVote', function() {
 ```
 1. The unit under test is `isEligibleToVote`
 2. Here, we setup the table testing
-    > **💡 TAKE NOTE** that **WE NEED** to name the test. So that later on, we could treat this as a clear-cut documentation for this function
+    > **💡 TAKE NOTE**
+    > 
+    >  That **WE NEED** to name the test. So that later on, we could treat this as a clear-cut documentation for this function
 
-> **⚠️ WARNING** Table-driven testing is still unconventional in NodeJS environment YET. It also breaks the default convention of `eslint-plugin-mocha`. Fortunately, you can customize your `rules`.
+> **⚠️ WARNING** 
+>
+> Table-driven testing is still unconventional in NodeJS environment YET. It also breaks the default convention of `eslint-plugin-mocha`. Fortunately, you can customize your `rules`.
 
 ### Further guidelines when structuring your tests
 
@@ -188,20 +198,20 @@ You could based the scenarios from the documentation requirements
 
 > **A** - rrange
 >
-> **Setup** your test, this could be under the `GIVEN` keyword
+> _SETUP_ the test first, this could be under the `GIVEN` keyword.
 > 
 > **A** - ct
 >
-> **Execute** the unit under test, it can also use the variables that was being set up in `GIVEN` section
+> _EXECUTE_ the unit under test, it can also use the variables that was being set up in `GIVEN` section
 > 
 > **A** - Assert
 > 
-> **Assert** the result and make sure it satisfies the expectation
+> _VERIFY_  the result and make sure it satisfies the expectation
 
 This will allow the reader or reviewer assess your code more easily.
 
 **😞 BAD EXAMPLE**
-```javascript
+```js
 describe('Customer classifier', function() {
   it('should be classified as premium', function() {
     const customerToClassify = { 
@@ -222,16 +232,16 @@ describe('Customer classifier', function() {
 });
 ```
 
-Although, the example is pretty straight forward in the developer's point of view. It is horrible for the non-technical people. **IT DOES NOT** state any kind of steps why the expected result should be classified as premium.
+Although, the example is pretty straight forward on developer's point of view. It is quite horrible for non-technical people. **IT DOES NOT** state any kind of steps to replicate the expected result.
 
 **🥳 THIS IS MUCH BETTER**
-```javascript
+```js
 describe('Customer classifier', function() {
   describe('GIVEN the classification is regular', function() {
     before(function() {
       this.customerToClassify = { spend: 505, joined: new Date(), id: 1 };
 
-      this.DBStub = sinon.stub(dataAccess, 'getCustomer').reply({
+      sinon.stub(dataAccess, 'getCustomer').reply({
         id: 1,
         classification: 'regular',
       });
@@ -250,13 +260,15 @@ describe('Customer classifier', function() {
 });
 ```
 
-The test runner would output this eligibly and readable for technical and non-technical people.
+The test runner would output this eligibly thus increasing the readability for BOTH technical and non-technical people.
 
 ### Section 1.3: Describe expectations in a product language: use BDD-style assertions
 
-Coding your tests in a declarative-style allow the reader to get the grab instantly without spending even a single brain-CPU cycle.
+Coding your tests in a declarative-style allow the reader to get the gist instantly without spending more time to digest the information.
 
-Base on the examples above we are structuring our tests via BDD-style.
+> **💡 TAKE NOTE**
+>
+> Base on the examples above we are structuring our tests via BDD-style.
 
 **😞 BAD**
 ```javascript
@@ -286,7 +298,7 @@ test("When asking for an admin, ensure only ordered admins in results", () => {
 ```
 
 **🥳 GOOD**
-```javascript
+```js
 describe('User', function() {
   describe('GIVEN the list of accounts', function() {
     before(function() {
@@ -315,24 +327,39 @@ Testing the internals brings huge overhead for almost nothing. If you code/API d
 Whenever a public behavior is checked, the private implementation is also implicitly tested and your tests will break only if there is a certain problem (e.g. wrong output).
 
 **😞 BAD**
-```javascript
+```js
 class ProductService {
-  //this method is only used internally
-  //Change this name will make the tests fail
+  /**
+   * This method is only used internally, to abstract some logic.
+   * 
+   * 1. Change this name will make the test FAIL!
+   * 
+   * 2. Change the result format or key name above will make the test FAIL!
+   */
   calculateVATAdd(priceWithoutVAT) {
     return { finalPrice: priceWithoutVAT * 1.2 };
-    //Change the result format or key name above will make the tests fail
   }
-  //public method
-  getPrice(productId) {
+
+  /**
+   * We will test this method since this is a public method.
+   */
+  public getPrice(productId) {
     const desiredProduct = DB.getProduct(productId);
+
     finalPrice = this.calculateVATAdd(desiredProduct.price).finalPrice;
+
     return finalPrice;
   }
 }
 
 it("White-box test: When the internal methods get 0 vat, it return 0 response", async () => {
-  //There's no requirement to allow users to calculate the VAT, only show the final price. Nevertheless we falsely insist here to test the class internals
+  /**
+   * There's no requirement to allow users to calculate the VAT,
+   * 
+   * only shows the final price.
+   * 
+   * Nevertheless we falsely insist here to test the class internals
+   */
   expect(new ProductService().calculateVATAdd(0).finalPrice).to.equal(0);
 });
 ```
@@ -343,22 +370,30 @@ it("White-box test: When the internal methods get 0 vat, it return 0 response", 
 Before using test doubles, ask a very simple question: Do I use it to test functional that appears, or could appear, in the requirement document? If no, it's a white-box testing smell.
 
 **😞 BAD**
-```javascript
+```js
 it("When a valid product is about to be deleted, ensure data access DAL was called once, with the right product and right config", async () => {
-  //Assume we already added a product
+  /**
+   * Assume, we already added the product
+   */
   const dataAccessMock = sinon.mock(DAL);
-  //hmmm BAD: testing the internals is actually our main goal here, not just a side-effect
+  /**
+   * BAD!
+   * 
+   * Testing the internals is acutally our main goal here, not just a side-effect.
+   */
   dataAccessMock
     .expects("deleteProduct")
     .once()
     .withArgs(DBConfig, theProductWeJustAdded, true, false);
+
   new ProductService().deletePrice(theProductWeJustAdded);
+
   dataAccessMock.verify();
 });
 ```
 
 **🥳 GOOD**
-```javascript
+```js
 describe('WHEN a valid product is about to be deleted', function() {
   before(function () {
     sinon.spy(Emailer.prototype, 'sendEmail');
@@ -372,7 +407,9 @@ describe('WHEN a valid product is about to be deleted', function() {
 });
 ```
 
-> 💡 **TAKE NOTE** Spies are focused in testing the requirements but as a side-effect are unavoidably touching to the internals.
+> 💡 **TAKE NOTE** 
+> 
+> Spies are focused in testing the requirements but as a side-effect are unavoidably touching to the internals.
 
 
 ### Section 1.6: Don't "foo", use realistic input data
@@ -414,6 +451,7 @@ it("Better: When adding new valid product, get successful confirmation", async (
 
 Typically we chooose a few input sample for each test. Even when the input format resembles real-world data.
 However, in productio, an API that is called with 5 parameters can be invoked with thousands of different permutations, one of them might render our process down 
+
 [Fuzz Testing](https://en.wikipedia.org/wiki/Fuzzing)
 
 [fast-check](https://github.com/dubzzz/fast-check)
@@ -446,14 +484,22 @@ before(async () => {
 it("When updating site name, get successful confirmation", async () => {
   //I know that site name "portal" exists - I saw it in the seed files
   const siteToUpdate = await SiteService.getSiteByName("Portal");
+
   const updateNameResult = await SiteService.changeName(siteToUpdate, "newName");
+
   expect(updateNameResult).to.be(true);
 });
 
 it("When querying by site name, get the right site", async () => {
   //I know that site name "portal" exists - I saw it in the seed files
   const siteToCheck = await SiteService.getSiteByName("Portal");
-  expect(siteToCheck.name).to.be.equal("Portal"); //Failure! The previous test change the name :[
+
+  /**
+   * Failure!
+   * 
+   * The previous test change the name
+   */
+  expect(siteToCheck.name).to.be.equal("Portal");
 });
 ```
 
@@ -587,6 +633,94 @@ Chaos Engineering, it aims to provide awareness, frameworks and tools for testin
 - `chaos monkey`
 - `kube-monkey`
 
+### 💥 Chaos Engineering
+> Chaos Engineering is the discipline of experimenting on a system in order to build confidence in the system's capability to withstand turbulent conditions in production.
+
+1. Start by defining 'steady state' as some measurable output of a system that indicates normal behavior.
+
+2. Hypothesize that this steady state will continue in both the control group and the experimental group.
+
+3. Try to disprove the hypothesis by looking for a difference in steady state between the control group and the experimental group.
+
+I. Plan an Experiment
+II. Contain the blast radius
+III. Scale or squash
+
+These experiments have added benefit of helping teams build muscle memory in resolving outages, akin to a fire drill (or changing a flat tire, in the Netflix analogy). By breaking things on purpose we surface unknown issues that could impact our systems and customers.
+
+Fallacies of Distributed Systems:
+1. The network is reliable
+2. Latency is zero
+3. Bandwidth is infinite
+4. The network is secure
+5. Topology doesn't change
+6. There is one administrator
+7. Transport cost is zero
+8. The network is homogenous
+
+Chaos Engineering for service teams
+1. Traffic Team (e.g. Nginx, Apache, DNS)
+2. Streaming Team (e.g. Kafka)
+3. Storage Team (e.g. S3)
+4. Data Team (e.g. Hadoop/HDFS)
+5. Database Team (e.g. MySQL, Amazon RDS, PostgreSQL)
+
+What are the customer, business, and technical benefits of Chaos Engineering?
+- Customer: the increased availability and durability of service means no outages disrupt their day-to-day lives.
+- Business: Chaos Engineering can help prevent extremely large losses in revenue and maintenance costs, create happier and more engaged engineers, improve in on-call training for engineering teams, and improve the SEV (incident) Management Program for the entire company.
+- Technical: The insights from chaos engineering can mean a reduction in incidents, reduction in on-call burden, increased understanding of system failure modes, improved system design, faster mean time to detection for SEVs, and reduction in repeated SEVs.
+
+### ADVANCED PRINCIPLES
+Build a hypothesis around steady state behavior
+
+Vary Real-world Events
+
+Run experiments in Production
+
+Automate Expiriments to run continuously
+
+Minimize Blast Radius
+
+### Conclusion
+As a web system have grown much more complex with the rise of distributed systems and microservices, system failures have become difficult to predict. So, in order to prevent failures from happening, we all need to be proactive in our efforts to from the failure.
+
+### Techniques
+
+**Resource**
+- Throttle CPU
+- Memory
+- I/O
+- Disk
+
+**State Gremlins**
+- Reboot hosts
+- Kill processes
+- Travel in time
+
+**Network**
+- Introduce Latency
+- Blackhole Traffic
+- Lose Packets
+- Fail DNS
+
+### How To Get Started
+- Consider your failure points and map depedencies
+The practice of Chaos Engineering developed in response to the increased complexity of cloud-based architectures and shorter development cycles.
+
+- Form a hypotheses
+Once you have an idea of how your service interacts with other components of your architecture, think about where failures may occur.
+1. Are services tightly coupled in a "distributed monolith" where a single service failure renders several or all other services inoperable?
+2. Could increased network latency between services cascade (or multiply) throughout the system?
+3. Are services necessary to core functionality (sometimes described as "in the critical path") resilient to common scenarios like node failure?
+
+- Define the smallest possible blast radius
+
+- Run your first attack
+
+- Observe the results
+
+- Scale our squash
+
 ### 📏 Section 3: Measuring Test
 1. Get enough coverage for being confident ~80% seem to be the lucky number
 The purpose of testing is to get enough confidence for moving fast, obviously the more code is tested the more confident the team can be. Coverage is a measure of how many code lines (and branches, statements, etc) are bing reached by the tests. 
@@ -689,6 +823,7 @@ ______________
 ### Chaos Engineering
 - [chaosmonkey](https://github.com/Netflix/chaosmonkey)
 - [kube-monkey](https://github.com/asobti/kube-monkey)
+- [Gremlim](https://www.gremlin.com/)
 
 ### Code Coverage
 - [nyc](https://github.com/istanbuljs/nyc)
