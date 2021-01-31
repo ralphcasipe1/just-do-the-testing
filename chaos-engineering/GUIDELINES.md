@@ -13,6 +13,24 @@ It is Chaos Engineering that help you build confidence in your system in product
 Chaos is so much more than merely "hurting your system", it's about establishing a discipline for implementing double-loop learning through experiments sothat you can build confidence in chaotic and complex environments.
 
 ## STARTING WITH TURBULENCE
+- Consider your failure points and map depedencies
+The practice of Chaos Engineering developed in response to the increased complexity of cloud-based architectures and shorter development cycles.
+
+- Form a hypotheses
+Once you have an idea of how your service interacts with other components of your architecture, think about where failures may occur.
+1. Are services tightly coupled in a "distributed monolith" where a single service failure renders several or all other services inoperable?
+2. Could increased network latency between services cascade (or multiply) throughout the system?
+3. Are services necessary to core functionality (sometimes described as "in the critical path") resilient to common scenarios like node failure?
+
+- Define the smallest possible blast radius
+
+- Run your first attack
+
+- Observe the results
+
+- Scale our squash
+
+
 1. Figure out a steady-state hypothesis, including what probes and tolerances you want to include.
 
 2. Figure out what probes and actions you want in your method.
