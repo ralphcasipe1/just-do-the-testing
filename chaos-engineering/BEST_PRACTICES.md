@@ -46,15 +46,24 @@ Lower-Level Environments
 Introduce chaos at container level: killing, stopping and removing running containers.
 
 __________
-Shift Left
+### Shift Left
 
-Shift Right
+Shift-left testing means experiment early, experiment often. Incorporate fault-injection configurations and create resiliency-validation gates during the development stages and in the deployment pipeline.
 
-Blast Radius
+### Shift Right
+Shift-right testing means that you verify that the service is resilient where it counts in a pre-production or production environment with actual customer load. Adopt a proactive approach as opposed to reacting to failures. Be a part of determining and controlling requirements for the blast radius.
 
-Error Budgeting Testing
+### Blast Radius
+
+Stop the experiment when it goes beyond scope. Unknown results are an expected outcome of chaos experiments. Strive to achieve balance between collecting substantial result data and affecting as few production users as possible. For an example of this principle in practice, see the Bulkhead pattern article.
+
+### Error Budgeting Testing
+
+Establish an error budget as an investment in chaos and fault injection. Your error budget is the difference between achieving 100% of the service-level objective (SLO) and achieving the agreed-upon SLO.
 
 ____
+
+## EXPERIMENTING
 
 I. Plan an Experiment
 II. Contain the blast radius
@@ -62,7 +71,7 @@ III. Scale or squash
 
 These experiments have added benefit of helping teams build muscle memory in resolving outages, akin to a fire drill (or changing a flat tire, in the Netflix analogy). By breaking things on purpose we surface unknown issues that could impact our systems and customers.
 
-Fallacies of Distributed Systems:
+### Fallacies of Distributed Systems:
 1. The network is reliable
 2. Latency is zero
 3. Bandwidth is infinite
@@ -72,14 +81,15 @@ Fallacies of Distributed Systems:
 7. Transport cost is zero
 8. The network is homogenous
 
-Chaos Engineering for service teams
+### Chaos Engineering for service teams
+
 1. Traffic Team (e.g. Nginx, Apache, DNS)
 2. Streaming Team (e.g. Kafka)
 3. Storage Team (e.g. S3)
 4. Data Team (e.g. Hadoop/HDFS)
 5. Database Team (e.g. MySQL, Amazon RDS, PostgreSQL)
 
-What are the customer, business, and technical benefits of Chaos Engineering?
-- Customer: the increased availability and durability of service means no outages disrupt their day-to-day lives.
-- Business: Chaos Engineering can help prevent extremely large losses in revenue and maintenance costs, create happier and more engaged engineers, improve in on-call training for engineering teams, and improve the SEV (incident) Management Program for the entire company.
-- Technical: The insights from chaos engineering can mean a reduction in incidents, reduction in on-call burden, increased understanding of system failure modes, improved system design, faster mean time to detection for SEVs, and reduction in repeated SEVs.
+
+
+## References
+1. [Microsoft's Chaos Engineering](https://docs.microsoft.com/en-us/azure/architecture/framework/resiliency/chaos-engineering)
