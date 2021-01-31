@@ -12,3 +12,9 @@
     - Automate experiments to run continuously
 
 Lastly, if you are build cloud native microservices for production when it comes to adopting it. THEN DO IT!
+
+> It's a must for any large-scale distributed system.
+
+
+## References
+1. [phoenixNAP's Chaos Engineering Blog](https://phoenixnap.com/blog/chaos-engineering)

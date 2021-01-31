@@ -1,29 +1,34 @@
-DIFFERENCE BETWEEN CHAOS ENGINEERING AND FAILURE TESTING
+# DIFFERENCE BETWEEN CHAOS ENGINEERING AND FAILURE TESTING
 
-FAILURE TESTING
-- Are tests that usually found in pyramid tests (unit, integration and e2e).
+## FAILURE TESTING
+- Are tests that usually found in pyramid tests (**unit**, **integration** and **e2e**).
 
 A failure test examines a single condition and determines whether a property is true or false.
 
 The results are usually binary, and they do not uncover new information about the application.
 
-The goal of a chaos test is to generate new knowledge about the system. Broader scope and unpredictable outcomes enable you to learn about the system's behaviors, properties, and performance. You open new avenues for exploration and see how you can improve the system.
+The goal of a chaos test is to generate new knowledge about the system. Broader scope and unpredictable outcomes enable you to learn about the system's _behaviors_, _properties_, and _performance_. 
 
-While different, chaos and failure testing do have some overlap in concerns and tools used. You get the best results when you use both disciplines to test an application.
+You open new avenues for exploration and see how you can improve the system.
+
+While different, chaos and failure testing do have some overlap in concerns and tools used. 
+
+You get the best results when you use both disciplines to test an application.
 
 
-A UNIT TEST
+### UNIT TEST
 
 [input] ---------> (component A) ------------> [output]
 
-INTEGRATION
+### INTEGRATION TEST
 
 [input] ---------> (component A) ------(component B)------> [output]
 
-CHAOS EXPERIMENT
+### CHAOS EXPERIMENT
 
 (SERVICE 1) <----------> (SERVICE 2) -> UNPREDICTABLE OUTPUT
 
+```
 S1
 - Component A
 - Component B
@@ -33,4 +38,4 @@ S2
 - Component D
 - Component E
 - Component F
-
+```
