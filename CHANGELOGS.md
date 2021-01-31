@@ -16,3 +16,4 @@
 - Increase Readability of Section 1
 - Make blockquote's structure more consistent
 - Add more emphasis on relevant statements.
+- Compartmentalize topics regarding chaos engineering.
