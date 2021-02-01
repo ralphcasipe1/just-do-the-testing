@@ -1,7 +1,7 @@
 # CHAOS ENGINEERING
 
 ## TABLE OF CONTENTS
-- [INTRODUCTION](https://github.com/ralphcasipe1/just-do-the-testing/blob/main/chaos-engineering/INTRODUCTION.md)
+- [INTRODUCTION](https://github.com/ralphcasipe1/just-do-the-testing/blob/develop/chaos-engineering/INTRODUCTION.md)
 
 - [PRINCIPLES](https://github.com/ralphcasipe1/just-do-the-testing/blob/develop/chaos-engineering/PRINCIPLES.md)
 
