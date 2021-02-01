@@ -18,3 +18,5 @@
 - [GUIDELINES](https://github.com/ralphcasipe1/just-do-the-testing/blob/develop/chaos-engineering/GUIDELINES.md)
 
 - [TECHNIQUES](https://github.com/ralphcasipe1/just-do-the-testing/blob/develop/chaos-engineering/TECHNIQUES.md)
+
+- [FAQS](https://github.com/ralphcasipe1/just-do-the-testing/blob/develop/chaos-engineering/FAQS.md)

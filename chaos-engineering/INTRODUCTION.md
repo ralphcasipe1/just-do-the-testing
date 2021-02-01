@@ -36,13 +36,17 @@ By "breaking things" on purpose, you discover new issues that could impact compo
 >
 > _The goal is to **obeserve**, **monitor**, **respond to** and **improve** your system's reliability under adverse circumstances_. [ [1](https://docs.microsoft.com/en-us/azure/architecture/framework/resiliency/chaos-engineering) ]
 
-It is a new approach to software development and testing designed to eliminate some of that unpredictability by putting that complexity and interdependence to the test.
+It is an approach to software development and testing designed to eliminate some of that unpredictability by putting that complexity and interdependence to the test.
 
-The idea is to put MOST parts of your system in a deterministic manner by performing controlled experiments in a distributed environment. This will help your team build confidence in the system's ability to tolerate the inevitable failures.
+The idea is to put MOST parts of your system resilient by performing controlled and limit scope of experiments in a distributed environment. This will help your team build confidence in the system's ability to tolerate the inevitable failures.
 
-In other words, break your system on purpose to find out where the weaknesses are. That way, you can fix them before they break unexpectedly and hurt the business and your users.
+In other words, **break your system on purpose to find out where the weaknesses are**. That way, you can fix them before they break unexpectedly and hurt the business and your users.
 
-As a result, you will better understand how your systems really behave when they fail. You can exercise contingency plans at scale to ensure those plans works as designed. Chaos Engineering Services also provides the ability to revert systems back to their original states without impacting users. It can also saves a lot of time and money that would be spent responding to systems outages.
+As a result, you will better understand how your systems really behave when they fail. You can exercise contingency plans at scale to ensure those plans works as designed, it is also called as GameDays. 
+
+Some chaos engineering tools or services also provides the ability to revert systems back to their original states without impacting users. 
+
+It can also saves a lot of time and money that would be spent responding to systems outages.
 
 ### Build Testing vs Chaos Engineering
 

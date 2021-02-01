@@ -1,8 +1,9 @@
 # CASE STUDIES
 
 ### CASE STUDY ONE
+
 ## LEADING TELECOMMUNICATIONS SERVICE PROVIDER
-Designing Microservices Platform based on popular container orchestration engine.
+> Designing Microservices Platform based on popular container orchestration engine.
 
 Being a telecommunication provider most critical aspect of their service is SLA.
 
@@ -17,7 +18,7 @@ Experiments
 
 ### CASE STUDY TWO
 
-Designing and developing SDK
+> Designing and developing SDK
 
 SDK code was responsible for downloading or uploading Terabytes of data. It was critical for SDK to work even under inconsistent network conditions. Team proactively developed and verified the following experiments.
 
