@@ -1,5 +1,8 @@
 # DIFFERENCE BETWEEN CHAOS ENGINEERING AND FAILURE TESTING
 
+> **ROUGH DRAFT**
+
+
 ## FAILURE TESTING
 - Are tests that usually found in pyramid tests (**unit**, **integration** and **e2e**).
 
