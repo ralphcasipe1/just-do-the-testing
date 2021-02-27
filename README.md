@@ -32,6 +32,15 @@
   The citations I made when writing this.
 ____________
 
+## Why write a test?
+
+First of all anyone who has ever done manual testing knows that it's slow, boring and error-prone. By writing automated tests we are trrying to remove -- or at the very least improve -- on these pain points.
+
+We want to move fast, with confidence that things work. That's why tests should:
+- Give us confidence that the code does what it should.
+- Provide feedback that is fast, accurate, reliable and predictable
+- Make maitenance easier, something that is commonly overlooked when writing tests.
+
 ## ☯️ The Way of Testing
 > 🌟 
 >
@@ -746,3 +755,4 @@ ______________
 
 ## References
 1. [Javascript Testing Best Practices, The Golden Rule: Design For Testing by Yoni Goldberg, Bruno Scheufler, Ido Richter and Kyle Martin](https://github.com/goldbergyoni/javascript-testing-best-practices#%EF%B8%8F-0-the-golden-rule-design-for-lean-testing)
+2. [Testing of Microservices](https://www.infoq.com/articles/testing-techniques-microservices-use-cases/)
