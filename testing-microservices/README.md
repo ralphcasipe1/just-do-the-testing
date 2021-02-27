@@ -1,3 +1,50 @@
+## Traditional Test Strategy
+Most people are familar with the famous Testing Pyramid.
+
+This technique was an extremely efficient way to organize tests. In a microservice world, this is no longer the case, and we would argue that it can be actively harmful.
+
+The biggest comlexity in a Microservice is not within the service itself, but in how it interfacts with others, and that deserves special attention.
+
+Having too many unit tests in Microservices, which are small by definition, also restricts how we can change the code without also having to change the tests. By having to change the tests we lose some confidence that the code still does what it should and it has a negative impact on the speed we iterate at.
+
+## Microservices Test Strategy
+
+A more fitting way of structuring our tests for Microservices would be the Testing Honeycomb.
+
+Integrated
+Integration
+Implementation Details
+
+This means we should focus on Integration Tests, have a few implementation Detail Tests and even fewer Integrated Tests (ideally none).
+
+### Integrated Tests
+- We spin up other services in a local testing environment
+- We test against other services in a shared testing environment
+- Changes to your system breaks tests for other systems
+
+This is quite fragile way of testing and we recommend learning more directly from the source above.
+
+### Integration Tests
+Verifies the correctness of the service in a more isolated fashion while focusing on the interaction points and making them very explicit.
+
+### Takeaways
+- Give confidence that the code does what it should.
+- Provide fast, accurate, reliable and predictable feedback.
+- Make maintenance easier, something that is commonly overlooked when writing tests
+  - Test from the edges and leave it cleaner than you found it with confidence that knowing it doesn't break.
+______
+
+## 5 Tips for Testing Microservices
+1. Treat each service as a software module. Conduct unit tests on the service as you would for any new piece of code. In a microservice architecture, each service is treated as a black box, so you should test it in a similar fashion.
+
+2. Work out the essential links in your architecture and seek to test those. For instance, there's a strong link between the user login service, the frontend that will display user details and the database storing those details.
+
+3. Don't try to assemble the entire microservice environment in a small test setup -- you are only asking for weeks of pain. 
+
+4. Try to test across different setups
+
+5. Make good use of Canary Testing for new code and test using real-life users. Ensure that all your code is well instrumented and take advantage of all the monitoring offered by your platform provider. This is in direct conflict with the test-driven development methodology since in this approach you sacrifice test coverage in favaor of testing in the wild.
+______
 When working with microservices, you have more options because microservices are deployed typically in environments that use containers like Docker. In microservice architectures, your teams are likely to use a wider variety of testing techniques. Also, since microservices communicate more over the wire, you need to test the impact of network connections more thoroughly. Using tools and techniques that better fit the new architecture can allow for faster time to market, less cost, and less risk.
 
 The organization of the people working on the application often influences how the code and test environments are organized; this effect is known as Conway's Law. Typically, the code will be split into several layers of components such as UI, services, and repositories. The monoliths will be deployed to shared environments, usually development, QA, and user acceptance testing.
@@ -293,3 +340,7 @@ We have explored techniques for managing microservice dependencies when testing 
 1. [Testing Microservices: An Overview of 12 Useful Techniques](https://www.infoq.com/articles/twelve-testing-techniques-microservices-intro/)
 2. [Testing Microservices: Examining the Tradeoffs of Twelve Techniques](https://www.infoq.com/articles/twelve-testing-techniques-microservices-tradeoffs/)
 3. [Testing Microservices: Six Case Studies with a Combination of Testing Techniques](https://www.infoq.com/articles/testing-techniques-microservices-use-cases/)
+4. [Testing of Microservice in Spotify Engineering Blog](https://engineering.atspotify.com/2018/01/11/testing-of-microservices/)
+5. [Integrated Tests Are a Scam](https://blog.thecodewhisperer.com/permalink/integrated-tests-are-a-scam)
+6. [How To Test Microservice](https://www.functionize.com/blog/how-to-test-microservices/)
+7. [How to DO Shift Left Testing Right](https://www.functionize.com/blog/how-to-do-shift-left-testing-right/)
