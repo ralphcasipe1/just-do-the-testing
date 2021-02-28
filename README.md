@@ -52,7 +52,7 @@ We want to **move fast** and with confidence that things work. That's why tests 
 
 - _Provide feedback_ that is **fast**, **accurate**, **reliable** and **predictable**.
 
-- _Make maintenance easier_, something that is commonly overlooked when writing tests.
+- _Make maintenance easier_, this is something commonly overlooked when writing tests.
 
 ## 🏛️ Section 1: Test Structures
 
