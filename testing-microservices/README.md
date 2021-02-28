@@ -18,6 +18,8 @@ A more fitting way of structuring our tests for Microservices would be the Testi
  |  |
   \/
 
+-----------------
+
 -  /\  Integrated Test
 - |  | Integration Test
 -  \/  Implementation Details Test
