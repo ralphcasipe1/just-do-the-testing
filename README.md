@@ -1,37 +1,39 @@
 ## 📜 Table of Contents
 - **[Test Structures](#Section-1:-Test-Structures)**
 
-  Optimal way on structuring test which is aiming for readability and maintainability.
+    Optimal way on structuring test which is aiming for readability and maintainability.
 
 - **[Back-end](#Back-end)**
 
-  In this section, we would share testing techniques outside the famous test pyramid (unit, integration and e2e). How micro-service architecture affects testing and what are the efficient way to test it.
+    In this section, we would share testing techniques outside the famous test pyramid (unit, integration and e2e). How micro-service architecture affects testing and what are the efficient way to test it.
 
 - **[Microservices Testing Techniques](https://github.com/ralphcasipe1/just-do-the-testing/tree/develop/testing-microservices)**
 
+    We will share 12 common techniques and when to use it.
+
 - **[Chaos Engineering/Testing](https://github.com/ralphcasipe1/just-do-the-testing/tree/develop/chaos-engineering)**
 
-  This section will talk about Chaos Engineering.
+    We will talk about starting and maintaining the culture of chaos engineering/testing.
 
 - **[Measuring test](#Measuring-test)**
 
-  Measuring the quality of the implemented Tests
+    Measuring the quality of the implemented Tests
 
 - **[CI](#CI)**
 
-  Leveraging continuous testing for failing fast and continuous improvement
+    Leveraging continuous testing for failing fast and continuous improvement
 
 - **[Conclusion](#Conclusion)**
 
-  My closing thoughts about the current state of testing techniques in todays era.
+    My closing thoughts about the current state of testing techniques in todays era.
 
 - **[Resources](#Resources)**
 
-  My research materials that help me a lot when writing this.
+    My research materials that help me a lot when writing this.
 
 - **[References](#References)**
 
-  The citations I made when writing this.
+    The citations I made when writing this.
 ____________
 
 ## Reading Guidelines
