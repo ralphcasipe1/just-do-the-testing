@@ -34,8 +34,17 @@
   The citations I made when writing this.
 ____________
 
+## Reading Guidelines
+
+### Blockquotes
+
+- 🌟 A quote that could possibly give you insight, realization and etc.
+- 💡 Additional information or something to take not of.
+- ⚠️  A cautionary kind of quote for before or after you do the said content.
+____________
+
 ## ☯️ The Way of Testing
-> 🌟 
+> 🌟
 >
 > **"Test only as much as needed, strive to keep it nimble, sometimes it's even worth dropping some tests and trade reliability for agility and simplicity"**
 >
