@@ -13,9 +13,17 @@ Having too many unit tests in Microservices, which are small by definition, also
 
 A more fitting way of structuring our tests for Microservices would be the Testing Honeycomb.
 
-Integrated
-Integration
-Implementation Details
+```javascript
+  /\
+ |  |
+  \/
+
+-  /\  Integrated 
+- |  | Integration 
+-  \/  Implementation Details 
+```
+
+
 
 This means we should focus on Integration Tests, have a few implementation Detail Tests and even fewer Integrated Tests (ideally none).
 
