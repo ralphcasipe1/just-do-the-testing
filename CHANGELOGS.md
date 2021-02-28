@@ -3,7 +3,7 @@
 ## JANUARY
 
 ### New Topic
-Add **"Chaos Engineering"** section 
+- Add [**"Chaos Engineering"**](https://github.com/ralphcasipe1/just-do-the-testing/tree/develop/chaos-engineering) section 
 
 It comprises of several sections:
 1. INTRODUCTION
@@ -26,7 +26,7 @@ It comprises of several sections:
 ## February
 
 ### New Topic
-[Add **"Testing Microservices"** section](https://github.com/ralphcasipe1/just-do-the-testing/tree/develop/testing-microservices)
+- Add [**"Testing Microservices"**](https://github.com/ralphcasipe1/just-do-the-testing/tree/develop/testing-microservices) section
 
 ### Readability
 - Add new header for [**"Why Write a Test?"**](https://github.com/ralphcasipe1/just-do-the-testing#why-write-a-test)
