@@ -7,7 +7,9 @@
 
   In this secion, we would share testing techniques outside the famous test pyramid (unit, integration and e2e). How micro-service architecture affects testing and what are the efficient way to test it.
 
-- **[Chaos Testing](https://github.com/ralphcasipe1/just-do-the-testing/tree/develop/chaos-engineering)**
+- **[Testing  Microservices](#Testing-Microservices)**
+
+- **[Chaos Engineering/Testing](https://github.com/ralphcasipe1/just-do-the-testing/tree/develop/chaos-engineering)**
 
   This section will talk about Chaos Engineering.
 
