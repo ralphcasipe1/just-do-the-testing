@@ -117,7 +117,7 @@ Here are the several ways of testing or managing contracts between components
  - ☣️ Risk
  
 
-### Testing your microservice with a test instance of another microservice
+### 1. Testing your microservice with a test instance of another microservice
 
 **🧟 Team maturity**
 - `+ Low impact`
@@ -144,7 +144,7 @@ Here are the several ways of testing or managing contracts between components
 > Testing a test instance of a dependency reduces the chance of introducing issues in test doubles. 
 > Follow the test pyramid to produce a sound development and testing strategy or you risk ending up with big E2E test suites that are costly to maintain and slow to run.
 
-### Testing your microservice with a production instance of another microservice
+### 2. Testing your microservice with a production instance of another microservice
 
 **🧟 Team maturity**
 - `Moderate impact`
@@ -168,7 +168,7 @@ Here are the several ways of testing or managing contracts between components
 
 This technique typically is applicable for simple, stable, non-critical APIs, which is a rare use case. Avoid it unless you have identified a specific good reason to do it.
 
-### Testing a microservice with third-party dependencies
+### 3. Testing a microservice with third-party dependencies
 
 **🧟 Team maturity**
 - `Moderate impact`
@@ -193,7 +193,7 @@ This technique typically is applicable for simple, stable, non-critical APIs, wh
 
 The organization may have to pay to test with a third-part API as third parties typically charge per transaction. This is especially relevant when testing performance.
 
-### Testing a microservice with a legacy non-microservice internal dependencies
+### 4. Testing a microservice with a legacy non-microservice internal dependencies
 
 **🧟 Team maturity**
 - `Moderate impact`
@@ -217,11 +217,11 @@ The organization may have to pay to test with a third-part API as third parties 
 
 This technique offers a fast feedback loop on issues with the contract between the new world of microservices and old legacy systems, reducing risk.
 
-### Testing a microservice with non-software (hardware) dependencies
+### 5. Testing a microservice with non-software (hardware) dependencies
 
 > I will leave this blank for now, since I don't have any experience in this department
 
-### Mocks 
+### 6. Mocks 
 
 **🧟 Team maturity**
 - `Moderate impact`
@@ -242,7 +242,7 @@ This technique offers a fast feedback loop on issues with the contract between t
 
 Mocks let you set up a low-granularity failure and hypothetical scenarios, hence increasing your test coverage.
 
-### Stubs 
+### 7. Stubs 
 
 **🧟 Team maturity**
 - `Moderate impact`
@@ -263,7 +263,7 @@ Mocks let you set up a low-granularity failure and hypothetical scenarios, hence
 
 While a mock replaces an object the microservice depends on with a test-specific object that verifies that the microservice is using it correctly, a stub replaces it with a test-specific object that provides test data to the microservice.
 
-### Simulators
+### 8. Simulators
 
 **🧟 Team maturity**
 - `Moderate impact`
@@ -286,7 +286,7 @@ While a mock replaces an object the microservice depends on with a test-specific
 
 This technique lets you simulate network issues, which is critical for testing microservice architectures that rely on networks.
 
-### Service virtualization
+### 9. Service virtualization
 
 **🧟 Team maturity**
 - `Moderate impact`
@@ -309,7 +309,7 @@ This technique lets you simulate network issues, which is critical for testing m
 
 Service-virtualization tools help to keep virtual service up to date. The faster the pace of change of project requirements, the more critical it is to keep the virtual services from becoming obsolete.
 
-### In-memory database
+### 10. In-memory database
 
 **🧟 Team maturity**
 - `Moderate impact`
@@ -326,7 +326,7 @@ Service-virtualization tools help to keep virtual service up to date. The faster
 **☣️ Risk**
 - `In-memory databases can behave differently than the real ones.`
 
-### Test Container
+### 11. Test Container
 
 **🧟 Team maturity**
 - `Moderate impact`
@@ -350,7 +350,7 @@ Service-virtualization tools help to keep virtual service up to date. The faster
 The test container can be configured differently than the real dependency, leading to false confidence in your test suite. Make sure you configure the container database the same as the production database.
 
 
-### Legacy in a box
+### 12. Legacy in a box
 
 **🧟 Team maturity**
 - `Moderate to high impact `
