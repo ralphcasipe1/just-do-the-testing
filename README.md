@@ -5,7 +5,7 @@
 
 - **[Back-end](#Back-end)**
 
-  In this secion, we would share testing techniques outside the famous test pyramid (unit, integration and e2e). How micro-service architecture affects testing and what are the efficient way to test it.
+  In this section, we would share testing techniques outside the famous test pyramid (unit, integration and e2e). How micro-service architecture affects testing and what are the efficient way to test it.
 
 - **[Microservices Testing Techniques](https://github.com/ralphcasipe1/just-do-the-testing/tree/develop/testing-microservices)**
 
