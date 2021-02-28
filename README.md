@@ -34,21 +34,25 @@
   The citations I made when writing this.
 ____________
 
-## Why write a test?
-
-First of all anyone who has ever done manual testing knows that it's slow, boring and error-prone. By writing automated tests we are trying to remove -- or at the very least improve -- on these pain points.
-
-We want to move fast, with confidence that things work. That's why tests should:
-- Give us confidence that the code does what it should.
-- Provide feedback that is fast, accurate, reliable and predictable.
-- Make maitenance easier, something that is commonly overlooked when writing tests.
-
 ## ☯️ The Way of Testing
 > 🌟 
 >
 > **"Test only as much as needed, strive to keep it nimble, sometimes it's even worth dropping some tests and trade reliability for agility and simplicity"**
 >
 > _-- Yoni Goldberg_
+
+## Why write a test?
+
+First of all anyone who has ever done manual testing knows that it's **slow**, **boring** and **error-prone**. 
+
+By writing automated tests we are trying to remove -- or at the very least improve -- on these pain points.
+
+We want to **move fast** and with confidence that things work. That's why tests should:
+- _Give us confidence_ that the code does what it should.
+
+- _Provide feedback_ that is **fast**, **accurate**, **reliable** and **predictable**.
+
+- _Make maintenance easier_, something that is commonly overlooked when writing tests.
 
 ## 🏛️ Section 1: Test Structures
 
