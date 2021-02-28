@@ -1,7 +1,7 @@
 # Testing Microservices
 
 ## Traditional Test Strategy
-Most people are familar with the famous Testing Pyramid.
+Most people are familar with the famous _Testing Pyramid_.
 
 This technique was an extremely efficient way to organize tests. In a microservice world, this is no longer the case, and we would argue that it can be actively harmful.
 
@@ -55,9 +55,16 @@ ______
 
 4. Try to test across different setups
 
-5. Make good use of Canary Testing for new code and test using real-life users. Ensure that all your code is well instrumented and take advantage of all the monitoring offered by your platform provider. This is in direct conflict with the test-driven development methodology since in this approach you sacrifice test coverage in favaor of testing in the wild.
+5. Make good use of _Canary Testing_ for new code and test using real-life users. Ensure that all your code is well instrumented and take advantage of all the monitoring offered by your platform provider. This is in direct conflict with the test-driven development methodology since in this approach you sacrifice test coverage in favaor of testing in the wild.
 ______
-When working with microservices, you have more options because microservices are deployed typically in environments that use containers like Docker. In microservice architectures, your teams are likely to use a wider variety of testing techniques. Also, since microservices communicate more over the wire, you need to test the impact of network connections more thoroughly. Using tools and techniques that better fit the new architecture can allow for faster time to market, less cost, and less risk.
+
+When working with microservices, you have more options because microservices are deployed typically in environments that use containers like Docker. 
+
+In microservice architectures, your teams are likely to use a wider variety of testing techniques. 
+
+Also, since microservices communicate more over the wire, you need to test the impact of network connections more thoroughly. 
+
+Using tools and techniques that better fit the new architecture can allow for faster time to market, less cost, and less risk.
 
 The organization of the people working on the application often influences how the code and test environments are organized; this effect is known as Conway's Law. Typically, the code will be split into several layers of components such as UI, services, and repositories. The monoliths will be deployed to shared environments, usually development, QA, and user acceptance testing.
 
@@ -71,11 +78,9 @@ Because of Conway's Law, siloed functional teams with complex communication patt
 In microservice architecture, you typically find:
 
 - Teams are organized around business capabilities such as cross-functional teams of several UI, middleware, and back-end developers, a database administrator, and a DevOps specialist.
-- Decentralized governance that allows every team to choose the right tool for their job
-- Decentralized data management that allows each microservice or group of related microservices to manage its own data.
+- _Decentralized governance_ that allows every team to choose the right tool for their job
+- _Decentralized data management_ that allows each microservice or group of related microservices to manage its own data.
 - Testing, deployments, and infrastructure typically are automated with little or no manual intervention.
-- Decentralized data management that allows each microservice or group of related microservice to manage its own data.
-- Testing, deployment, and infrastructure typically are automated with little or manual intervention.
 
 The main categories of solutions for testing microsercices are those that are already available in monolithic architectures, which are also applicable to microservices, and those desgined specifically for microsevice architectures.
 
