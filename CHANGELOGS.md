@@ -26,8 +26,13 @@ It comprises of several sections:
 [Add **"Testing Microservices"** section](https://github.com/ralphcasipe1/just-do-the-testing/tree/develop/testing-microservices)
 
 ### Readability
-- Add new header for **"Why Write a Test?"**
+- Add new header for [**"Why Write a Test?"**](https://github.com/ralphcasipe1/just-do-the-testing#why-write-a-test)
 - Add a legend for reader's awareness
+
 - Change the structure for `CHANGELOGS`
+
+  Change header 3 to a related category, instead of having a header 3 of `Major` and `Minor`.
+
 - Beautify quotes
+
 - Paraphrase some of the paragraphs
