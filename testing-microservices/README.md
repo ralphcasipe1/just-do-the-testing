@@ -219,7 +219,7 @@ This technique offers a fast feedback loop on issues with the contract between t
 
 ### Testing a microservice with non-software (hardware) dependencies
 
-> I will this blank for now, since I don't have any experience in this department
+> I will leave this blank for now, since I don't have any experience in this department
 
 ### Mocks 
 
