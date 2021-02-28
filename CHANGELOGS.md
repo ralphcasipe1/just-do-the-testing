@@ -15,7 +15,7 @@ It comprises of several sections:
 8. INSIGHTS
 
 ### Readability
-- Summarizes and put more intent in Section 1
+- Summarizes and put more intent in `Section 1`
 - Make blockquote's structure more consistent
 - Add more emphasis on relevant statements.
 - Compartmentalize topics regarding chaos engineering.
