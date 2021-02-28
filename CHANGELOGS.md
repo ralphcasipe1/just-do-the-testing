@@ -39,3 +39,5 @@ It comprises of several sections:
 - Beautify quotes
 
 - Paraphrase some of the paragraphs
+
+- Update [`README`](https://github.com/ralphcasipe1/just-do-the-testing#Testing-Microservices) to have clear-cut description in [Table of Contents](https://github.com/ralphcasipe1/just-do-the-testing#Testing-Microservices)
