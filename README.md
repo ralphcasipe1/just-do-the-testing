@@ -36,8 +36,6 @@ ____________
 
 ## Reading Guidelines
 
-### Blockquotes
-
 - 🌟 A quote that could possibly give you insight, realization and etc.
 - 💡 Additional information or something to take not of.
 - ⚠️  A cautionary kind of quote for before or after you do the said content.
