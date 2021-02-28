@@ -34,14 +34,12 @@
 - **[References](#References)**
 
     The citations I made when writing this.
-____________
 
 ## Reading Guidelines
 
 - 🌟 A quote that could possibly give you insight, realization and etc.
 - 💡 Additional information or something to take not of.
 - ⚠️  A cautionary kind of quote to help readers that the said content may not be for everyone.
-____________
 
 ## ☯️ The Way of Testing
 > 🌟
