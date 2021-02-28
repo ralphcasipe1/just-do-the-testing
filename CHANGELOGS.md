@@ -16,8 +16,11 @@ It comprises of several sections:
 
 ### Readability
 - Summarizes and put more intent in `Section 1`
+
 - Make blockquote's structure more consistent
+
 - Add more emphasis on relevant statements.
+
 - Compartmentalize topics regarding chaos engineering.
 
 ## February
@@ -31,7 +34,7 @@ It comprises of several sections:
 
 - Change the structure for `CHANGELOGS`
 
-  Change header 3 to a related category, instead of having a header 3 of `Major` and `Minor`.
+ >  Change header 3 to a related category, instead of having a header 3 of `Major` and `Minor`.
 
 - Beautify quotes
 
