@@ -9,7 +9,7 @@
 
 - **[Microservices Testing Techniques](https://github.com/ralphcasipe1/just-do-the-testing/tree/develop/testing-microservices)**
 
-    We will share 12 common techniques and when to use it.
+    We will share 12 common testing techniques in microservice and when to use it.
 
 - **[Chaos Engineering/Testing](https://github.com/ralphcasipe1/just-do-the-testing/tree/develop/chaos-engineering)**
 
