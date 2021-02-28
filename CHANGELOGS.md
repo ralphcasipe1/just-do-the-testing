@@ -3,16 +3,16 @@
 ## JANUARY
 
 ### New Topic
-Add Chaos Engineering Section 
+Add **"Chaos Engineering"** section 
 
 It comprises of several sections:
-- INTRODUCTION
-- PRINCIPLES
-- BENEFITS
-- GUIDELINES
-- TECHNIQUES
-- CASE STUDIES
-- INSIGHTS
+1. INTRODUCTION
+2. PRINCIPLES
+3. BENEFITS
+4. GUIDELINES
+6. TECHNIQUES
+7. CASE STUDIES
+8. INSIGHTS
 
 ### Readability
 - Summarizes and put more intent in Section 1
@@ -23,11 +23,11 @@ It comprises of several sections:
 ## February
 
 ### New Topic
-Add testing of microservices
+Add **"Testing Microservices"** section
 
 ### Readability
-- Add new header
-- Add a Legend for reader's awareness
-- Change the structure for CHANGELOGS
-- Beautify Quotes
+- Add new header for **"Why Write a Test?"**
+- Add a legend for reader's awareness
+- Change the structure for `CHANGELOGS`
+- Beautify quotes
 - Paraphrase some of the paragraphs
