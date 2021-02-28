@@ -2,18 +2,40 @@
 
 ## JANUARY
 
-### MAJOR
-- Add Chaos Engineering Section 
-    - INTRODUCTION
-    - PRINCIPLES
-    - BENEFITS
-    - GUIDELINES
-    - TECHNIQUES
-    - CASE STUDIES
-    - INSIGHTS
+### New Topic
+Add **"Chaos Engineering"** section 
 
-### Minor
-- Increase Readability of Section 1
+It comprises of several sections:
+1. INTRODUCTION
+2. PRINCIPLES
+3. BENEFITS
+4. GUIDELINES
+6. TECHNIQUES
+7. CASE STUDIES
+8. INSIGHTS
+
+### Readability
+- Summarizes and put more intent in `Section 1`
+
 - Make blockquote's structure more consistent
+
 - Add more emphasis on relevant statements.
+
 - Compartmentalize topics regarding chaos engineering.
+
+## February
+
+### New Topic
+[Add **"Testing Microservices"** section](https://github.com/ralphcasipe1/just-do-the-testing/tree/develop/testing-microservices)
+
+### Readability
+- Add new header for [**"Why Write a Test?"**](https://github.com/ralphcasipe1/just-do-the-testing#why-write-a-test)
+- Add a legend for reader's awareness
+
+- Change the structure for `CHANGELOGS`
+
+    >  Change header 3 to a related category, instead of having a header 3 of `Major` and `Minor`.
+
+- Beautify quotes
+
+- Paraphrase some of the paragraphs
