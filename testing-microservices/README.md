@@ -13,14 +13,14 @@ Having too many unit tests in Microservices, which are small by definition, also
 
 A more fitting way of structuring our tests for Microservices would be the Testing Honeycomb.
 
-```javascript
+```
   /\
  |  |
   \/
 
--  /\  Integrated 
-- |  | Integration 
--  \/  Implementation Details 
+-  /\  Integrated Test
+- |  | Integration Test
+-  \/  Implementation Details Test
 ```
 
 
