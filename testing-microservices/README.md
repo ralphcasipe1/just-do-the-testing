@@ -147,89 +147,73 @@ Here are the several ways of testing or managing contracts between components
 ### Testing your microservice with a production instance of another microservice
 
 **🧟 Team maturity**
-Moderate impact
+- `Moderate impact`
 
 **⏱️ Pace of change**
-Low impact
+- `Low impact`
 
 **⌛ Time to market**
-Quick to start
-
-Slows projects as complexity grows
+- `Quick to start`
+- `Slows projects as complexity grows`
 
 **💰 Cost**
-Low cost when complexity is low
-
-Can get costly as complexity grows
+- `Low cost when complexity is low`
+- `Can get costly as complexity grows`
 
 **☣️ Risk**
-Reduces the chances of introducing issues in test doubles
-
-Risk of not following the testing pyramid
-
-Can change the state of production systems
-
-Hard to simulate hypothetical scenarios
+- `Reduces the chances of introducing issues in test doubles`
+- `Risk of not following the testing pyramid`
+- `Can change the state of production systems`
+- `Hard to simulate hypothetical scenarios`
 
 This technique typically is applicable for simple, stable, non-critical APIs, which is a rare use case. Avoid it unless you have identified a specific good reason to do it.
 
 ### Testing a microservice with third-party dependencies
 
 **🧟 Team maturity**
-Moderate impact
+- `Moderate impact`
 
 **⏱️ Pace of change**
-Low impact
+- `Low impact`
 
 **⌛ Time to market**
-Quick to start
-
-Slows projects as complexity grows
+- `Quick to start`
+- `Slows projects as complexity grows`
 
 **💰 Cost**
-Low cost when complexity is low
-
-Can get costly as complexity grows
+- `Low cost when complexity is low`
+- `Can get costly as complexity grows`
 
 **☣️ Risk**
-Calls to third-party APIs can generate costs
-
-Reduces the chances of introducing issues in test doubles
-
-Risk of not following the testing pyramid
-
-Can change the state of production systems
-
-Hard to simulate hypothetical scenarios
+- `Calls to third-party APIs can generate costs`
+- `Reduces the chances of introducing issues in test doubles`
+- `Risk of not following the testing pyramid`
+- `Can change the state of production systems`
+- `Hard to simulate hypothetical scenarios`
 
 The organization may have to pay to test with a third-part API as third parties typically charge per transaction. This is especially relevant when testing performance.
 
 ### Testing a microservice with a legacy non-microservice internal dependencies
 
 **🧟 Team maturity**
-Moderate impact
+- `Moderate impact`
 
 **⏱️ Pace of change**
-Low impact
+- `Low impact`
 
 **⌛ Time to market**
-Quick to start
-
-Slows projects as complexity grows
+- `Quick to start`
+- `Slows projects as complexity grows`
 
 **💰 Cost**
-Low cost when complexity is low
-
-Can get costly as complexity grows
+- `Low cost when complexity is low`
+- `Can get costly as complexity grows`
 
 **☣️ Risk**
-Reduces the chances of introducing issues in test doubles
-
-Risk of not following the testing pyramid
-
-Can change the state of production systems.
-
-Hard to simulate hypothetical scenarios
+- `Reduces the chances of introducing issues in test doubles`
+- `Risk of not following the testing pyramid`
+- `Can change the state of production systems.`
+- `Hard to simulate hypothetical scenarios`
 
 This technique offers a fast feedback loop on issues with the contract between the new world of microservices and old legacy systems, reducing risk.
 
@@ -240,142 +224,127 @@ This technique offers a fast feedback loop on issues with the contract between t
 ### Mocks 
 
 **🧟 Team maturity**
-Moderate impact
+- `Moderate impact`
 
 **⏱️ Pace of change**
-Moderate impact
+- `Moderate impact`
 
 **⌛ Time to market**
-A moderate amount of time to start
-
-Reduces complexity
+- `A moderate amount of time to start`
+- `Reduces complexity`
 
 **💰 Cost**
-Might need in-house development efforts.
-
-Increases Test Coverage
+- `Might need in-house development efforts.`
+- `Increases Test Coverage`
 
 **☣️ Risk**
-Can become obsolete
+- `Can become obsolete`
 
 Mocks let you set up a low-granularity failure and hypothetical scenarios, hence increasing your test coverage.
 
 ### Stubs 
 
 **🧟 Team maturity**
-Moderate impact
+- `Moderate impact`
 
 **⏱️ Pace of change**
-Moderate impact
+- `Moderate impact`
 
 **⌛ Time to market**
-A moderate amount of time to start
-
-Reduces complexity
+- `A moderate amount of time to start`
+- `Reduces complexity`
 
 **💰 Cost**
-In house can be moderate costly
-
-Increases Test Coverage
+- `In house can be moderate costly`
+- `Increases Test Coverage`
 
 **☣️ Risk**
-Can become obsolete
+- `Can become obsolete`
 
 While a mock replaces an object the microservice depends on with a test-specific object that verifies that the microservice is using it correctly, a stub replaces it with a test-specific object that provides test data to the microservice.
 
 ### Simulators
 
 **🧟 Team maturity**
-Moderate impact
+- `Moderate impact`
 
 **⏱️ Pace of change**
-Low impact 
+- `Low impact `
 
 **⌛ Time to market**
-Off-the-shelf products help you get to market faster
+- `Off-the-shelf products help you get to market faster`
 
 **💰 Cost**
-Off-the-shelf products can be cost effective
-
-Commercial off-the-self products can get expensive
+- `Off-the-shelf products can be cost effective`
+- `Commercial off-the-self products can get expensive`
 
 **☣️ Risk**
-Reduces the risk of making common mistakes
-
-Allows simulation of network issues
-
-Open-source products come without a support contract
-
-Virtual services can become obsolete
+- `Reduces the risk of making common mistakes`
+- `Allows simulation of network issues`
+- `Open-source products come without a support contract`
+- `Virtual services can become obsolete`
 
 This technique lets you simulate network issues, which is critical for testing microservice architectures that rely on networks.
 
 ### Service virtualization
 
 **🧟 Team maturity**
-Moderate impact
+- `Moderate impact`
 
 **⏱️ Pace of change**
-Low impact
+- `Low impact`
 
 **⌛ Time to market**
-Off-the-shelf products help you get to market faster
+- `Off-the-shelf products help you get to market faster`
 
 **💰 Cost**
-Off-the-shelf products can be cost effective
-
-Commercial off-the-shelf products can get expensive
+- `Off-the-shelf products can be cost effective`
+- `Commercial off-the-shelf products can get expensive`
 
 **☣️ Risk**
-Reduces the risk of making common mistakes
-
-Allows simuation of network issues
-
-Open-source products come without a support contract
-
-Virtual services can become obsolete
+- `Reduces the risk of making common mistakes`
+- `Allows simuation of network issues`
+- `Open-source products come without a support contract`
+- `Virtual services can become obsolete`
 
 Service-virtualization tools help to keep virtual service up to date. The faster the pace of change of project requirements, the more critical it is to keep the virtual services from becoming obsolete.
 
 ### In-memory database
 
 **🧟 Team maturity**
-Moderate impact
+- `Moderate impact`
 
 **⏱️ Pace of change**
-Low impact
+- `Low impact`
 
 **⌛ Time to market**
-Reduces time to market where provisioning new database is problematic
+- `Reduces time to market where provisioning new database is problematic`
 
 **💰 Cost**
-Reduces the cost of licensing commercial databases
+- `Reduces the cost of licensing commercial databases`
 
 **☣️ Risk**
-In-memory databases can behave differently than the real ones.
+- `In-memory databases can behave differently than the real ones.`
 
 ### Test Container
 
 **🧟 Team maturity**
-Moderate impact
+- `Moderate impact`
 
 **⏱️ Pace of change**
-Low impact
+- `Low impact`
 
 **⌛ Time to market**
-Allows teams to move at their own pace
-
-Reduces time to market where provisioning new environments is problematic
+- `Allows teams to move at their own pace`
+- `Reduces time to market where provisioning new environments is problematic`
 
 **💰 Cost**
-Can reduce licensing costs
-
-Can reduce infrastructure costs
+- `Can reduce licensing costs`
+- `Can reduce infrastructure costs`
 
 **☣️ Risk**
-Can have licensing-cost implications
-
-Test containers can have a different configuration than the real production dependency.
+- `Can have licensing-cost implications`
+- `Test containers can have a different configuration than the real production dependency.`
 
 
 The test container can be configured differently than the real dependency, leading to false confidence in your test suite. Make sure you configure the container database the same as the production database.
@@ -384,27 +353,23 @@ The test container can be configured differently than the real dependency, leadi
 ### Legacy in a box
 
 **🧟 Team maturity**
-Moderate to high impact 
+- `Moderate to high impact `
 
 **⏱️ Pace of change**
-Low impact
+- `Low impact`
 
 **⌛ Time to market**
-Quick to start
-
-Slows projects as complexity grows
+- `Quick to start`
+- `Slows projects as complexity grows`
 
 **💰 Cost**
-Provisioning containers is an order of magnitude faster than provisioning hardware environments
-
-Time spent up front to configure containers
+- `Provisioning containers is an order of magnitude faster than provisioning hardware environments.`
+- `Time spent up front to configure containers`
 
 **☣️ Risk**
-Potential time for refactoring
-
-Quick to start
-
-Slows projects as complexity grows
+- `Potential time for refactoring`
+- `Quick to start`
+- `Slows projects as complexity grows`
 
 Provisioning containers is an order of magnitude faster than provisioning hardware environments
 
