@@ -11,6 +11,10 @@
 
     We will share 12 common testing techniques in microservice and when to use it.
 
+- **[Shift-Left Testing](https://github.com/ralphcasipe1/just-do-the-testing/tree/develop/shift-left-testing)**
+
+    I will introduce and share a short tutorial in starting off shift-left testing.
+
 - **[Chaos Engineering/Testing](https://github.com/ralphcasipe1/just-do-the-testing/tree/develop/chaos-engineering)**
 
     We will talk about starting and maintaining the culture of chaos engineering/testing.
