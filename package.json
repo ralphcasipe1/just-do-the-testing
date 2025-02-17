@@ -19,6 +19,6 @@
   "homepage": "https://github.com/ralphcasipe1/just-do-the-testing#readme",
   "devDependencies": {
     "chai": "^4.2.0",
-    "mocha": "^8.2.1"
+    "mocha": "^11.1.0"
   }
 }
